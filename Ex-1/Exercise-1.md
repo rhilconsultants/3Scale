@@ -19,7 +19,7 @@ echo "export OCP_API_URL=$(oc status | grep server | cut -d ‘ ‘ -f 6)” >> 
 echo "export API_URL=" >> ~/environ.sh
 echo "export API_NAMESPACE=3scale-api0" >> ~/environ.sh
 echo "export OCP_WILDCARD_DOMAIN=" >> ~/environ.sh
-<b>source ~/environ.sh**
+__source ~/environ.sh__
 ```
 
 
