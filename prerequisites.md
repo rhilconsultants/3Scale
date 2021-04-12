@@ -8,4 +8,5 @@ In order to start working with OpenShift pipeline you Need to have the following
   4. 3Scale Installed with dedicated tenant for each participant - Provided by the instructor
   5. oc binary - [Download Here](http://d3s3zqyaz8cp2d.cloudfront.net/pub/openshift-v4/clients/ocp/4.7.0/openshift-client-linux-4.7.0.tar.gz)
   6. jq - [Download Here](https://stedolan.github.io/jq/download/)
+  7. docker - [Download Here](https://docs.docker.com/engine/install/)
   7. Optional - IDE (VSCODE, etc.)
