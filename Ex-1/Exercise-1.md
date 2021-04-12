@@ -22,6 +22,8 @@ echo "export OCP_WILDCARD_DOMAIN=" >> ~/environ.sh
 source ~/environ.sh
 done
 ```
-![image](https://user-images.githubusercontent.com/60185557/114383956-cd7f3e00-9b96-11eb-9903-b2b5f30f39b5.png)
 
+<p align="center">
+![image](https://user-images.githubusercontent.com/60185557/114383956-cd7f3e00-9b96-11eb-9903-b2b5f30f39b5.png)
+</p>
 
