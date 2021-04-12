@@ -54,16 +54,16 @@ The convention for an internal services route is: service_name.namespace.svc.clu
 * namespace == echo $OCP_USERNAME-coolstore
 
 ### Add new backend #1
-Choose the BACKENDS tab in the dashboard page and press “NEW BACKEND”:
+Choose the *BACKENDS* tab in the dashboard page and press *NEW BACKEND*:
 
-	Name: **Coolstore Catalog Backend**
+Name: **Coolstore Catalog Backend**
 
-	System Name: **coolstore_catalog_backend**
+System Name: **coolstore_catalog_backend**
 
-	Description: **The backend Service for the coolstore catalog**
+Description: **The backend Service for the coolstore catalog**
 
-	Private Base URL: *the output of the following command:*
+Private Base URL: *the output of the following command:*
     
-    ```bash
-    echo http://catalog-service.$OCP_USERNAME-coolstore.svc.cluster.local:8080
-    ```
+```bash
+echo http://catalog-service.$OCP_USERNAME-coolstore.svc.cluster.local:8080
+```
