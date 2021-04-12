@@ -9,7 +9,7 @@
 To make life easier we will configure some environment variables.
 The variables' values are dedicated for each participant and are provided by the instructor.
 
-```
+```bash
 echo "export OCP_USERNAME=" >> ~/environ.sh
 echo "export OCP_PASSWORD=openshift" >> ~/environ.sh
 echo "export API_USERNAME=” >> ~/environ.sh
@@ -19,7 +19,8 @@ echo "export OCP_API_URL=$(oc status | grep server | cut -d ‘ ‘ -f 6)” >> 
 echo "export API_URL=" >> ~/environ.sh
 echo "export API_NAMESPACE=3scale-api0" >> ~/environ.sh
 echo "export OCP_WILDCARD_DOMAIN=" >> ~/environ.sh
+source ~/environ.sh
+done
 ```
-``**`source ~/environ.sh`**``
 
 
