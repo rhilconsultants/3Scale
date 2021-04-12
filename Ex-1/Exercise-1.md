@@ -23,6 +23,6 @@ source ~/environ.sh
 done
 ```
 
-![Screenshot]()
+![Screenshot](file:///home/tamber/Pictures/Screenshot%20from%202021-04-12%2013-53-38.png![image](https://user-images.githubusercontent.com/60185557/114383956-cd7f3e00-9b96-11eb-9903-b2b5f30f39b5.png)
 
 
