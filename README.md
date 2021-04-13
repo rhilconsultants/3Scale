@@ -5,7 +5,7 @@ This workshop and exercises are based on the content available in the [following
 
 Before we begin we should go over the prerequisites at [prerequisites page](prerequisites.md)
 
-The workShop will be divided into the following Exercises
+The Workshop is divided into the following Exercises
 
 1. [Getting Familiar with APIs](Ex-1/Exercise-1.md)
 2. [Getting Started with 3Scale](Ex-2/Exercise-2.md)
