@@ -1,6 +1,8 @@
 # 3Scale Workshop
 Welcome to 3Scale Workshop by Tommer Amber
 
+This workshop and exercises are based on the content available in the [following presentation](https://docs.google.com/presentation/d/17aj24Ab6k-_8hOvIWXJxIiEhXVMAsyGX5CJmmZ81znk/edit?usp=sharing)
+
 Before we begin we should go over the prerequisites at [prerequisites page](prerequisites.md)
 
 The workShop will be divided into 4 Exercises
