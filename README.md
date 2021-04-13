@@ -13,4 +13,4 @@ The workShop will be divided into 4 Exercises
 4. [External, Self Managed APICast](Ex-4/Exercise-4.md)
 5. [3Scale API Management Automation](Ex-5/Exercise-5.md)
 
-After each Exercise the Instructor will run the exercise with emphasis on the important parts;
+After each Exercise the Instructor will run the exercise with emphasis on the important parts.
