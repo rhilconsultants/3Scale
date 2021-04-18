@@ -105,7 +105,7 @@ curl -k -v "https://${OCP_USERNAME}-coolstore-api-3scale-apicast-production.apps
 
 Secondly - verify that you can’t access the POST method;
 ```bash
-curl -k -X POST "https://${OCP_USERNAME}-coolstore-api-3scale-apicast-production.apps.${OCP_WILDCARD_DOMAIN}:443/catalog/products?user_key=${USER_KEY}" -H "accept: application/json" -H "Content-Type: application/json" -d "{ \"itemId\": \"itemIdTest\", \"name\": \"lol\", \"desc\": \"lol\", \"price\": 555}" ; echo
+curl -k -X POST "https://${OCP_USERNAME}-coolstore-api-3scale-apicast-production.apps.${OCP_WILDCARD_DOMAIN}:443/catalog/product?user_key=${USER_KEY}" -H "accept: application/json" -H "Content-Type: application/json" -d "{ \"itemId\": \"itemIdTest\", \"name\": \"lol\", \"desc\": \"lol\", \"price\": 555}" ; echo
 ```
 <p align="center">
   <img src="https://user-images.githubusercontent.com/60185557/114397833-c876ba80-9ba7-11eb-910b-f0e5b8b3fbb9.png">
@@ -142,6 +142,14 @@ We need to change the user so it can use the new application plan
 **Audience** ⇒ **Applications** ⇒ **Mark specific app** ⇒ **Change application plan** ⇒ **Choose newly configured application plan**
 
 Run both tests for the previous section and see that they both work with no errors received.
+
+```bash
+curl -k -X POST "https://${OCP_USERNAME}-coolstore-api-3scale-apicast-production.apps.${OCP_WILDCARD_DOMAIN}:443/catalog/product?user_key=${USER_KEY}" -H "accept: application/json" -H "Content-Type: application/json" -d "{ \"itemId\": \"itemIdTest\", \"name\": \"lol\", \"desc\": \"lol\", \"price\": 555}" ; echo
+```
+
+```bash
+curl -k -v "https://${OCP_USERNAME}-coolstore-api-3scale-apicast-production.apps.${OCP_WILDCARD_DOMAIN}:443/catalog/products?user_key=${USER_KEY}"
+```
 
 # 3Scale Policies
 ## Intro
