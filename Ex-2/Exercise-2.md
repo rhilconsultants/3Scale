@@ -116,11 +116,15 @@ A metric can be calculated for all of the hits by using the default “hits” m
 The component that actually calculates the hits is the API gateway so the metrics are mostly configured in the "product" page and not in the "backend" page. In that regard the metrics are different from methods - but it is possible to add metrics in the backend level in some implementations.
 
 ## Add New Product #1
+
 Choose the *PRODUCTS* tab in the dashboard page and press *NEW PRODUCT*:
+
 **Define Manually**
+
 Name: **Coolstore API**
+
 System Name: **coolstore_api**
-*
+
 Now you have been redirected to the product page of Coolstore API, from which we will manage the APIcast for both services we just deployed.
 
 Now navigate to **Integration** ⇒ **Backends** ⇒ **Add backend** and add both backends, for paths choose “*/inventory*” for the inventory backend and “*/catalog*” for the catalog backend.
