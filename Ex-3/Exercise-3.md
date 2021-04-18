@@ -41,11 +41,14 @@ Also lets prevent access to the POST method;
 
 **Backend level** ⇒ **Catalog Backend** ⇒ **add new product** ⇒ Press the **enabled & visible checks**
 
-**Roll the page up and press "Update Application plan"**
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/60185557/114394522-f8bc5a00-9ba3-11eb-870a-761c4fdc5f9a.png">
 </p>
+
+
+**Roll the page up and press "Update Application plan"**
+
 
 We need to change the user that we configured in the previous exercise to use the new application plan
 
