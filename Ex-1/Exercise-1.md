@@ -69,7 +69,9 @@ oc create configmap app-config --from-file=$HOME/lab/app-config.yaml -n $OCP_USE
 
 oc policy add-role-to-user view -z default -n $OCP_USERNAME-coolstore
 
-oc create -f https://raw.githubusercontent.com/tommeramber/3scale_workshop_materials/master/coolstore-catalog-mongodb-persistent.yaml -n $OCP_USERNAME-coolstore
+oc create -f \
+https://raw.githubusercontent.com/tommeramber/3scale_workshop_materials/master/coolstore-catalog-mongodb-persistent.yaml \
+-n $OCP_USERNAME-coolstore
 
 oc new-app \
         --template=coolstore-catalog-mongodb \
