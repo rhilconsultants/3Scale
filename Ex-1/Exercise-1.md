@@ -128,18 +128,18 @@ swarm:
         password: jboss
 EOF
 
-$ oc create configmap inventory-config --from-file=$HOME/lab/inventory-config.yaml -n ${OCP_USERNAME}-coolstore
+oc create configmap inventory-config --from-file=$HOME/lab/inventory-config.yaml -n ${OCP_USERNAME}-coolstore
 
-$ oc create -f https://raw.githubusercontent.com/tommeramber/3scale_workshop_materials/master/coolstore-inventory-persistent.yaml -n $OCP_USERNAME-coolstore
+oc create -f https://raw.githubusercontent.com/tommeramber/3scale_workshop_materials/master/coolstore-inventory-persistent.yaml -n $OCP_USERNAME-coolstore
 
-$ oc new-app \
+oc new-app \
     --template=coolstore-inventory-postgresql \
     -p INVENTORY_SERVICE_NAME=inventory-service \
     -p INVENTORY_DB_USERNAME=jboss \
     -p INVENTORY_DB_PASSWORD=jboss \
     -p INVENTORY_DB_NAME=inventorydb
 
-$ oc get pods -w 
+oc get pods -w 
 ```
 
 Wait until the DB’s pod (inventory-postgresql-1-XXXX) is ready with "1/1 Running", and then resume the app service (which depends on the DB to be up to work correctly):
