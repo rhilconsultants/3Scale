@@ -16,6 +16,8 @@ echo "export API_USERNAME=" >> ~/environ.sh
 echo "export API_PASSWORD=admin" >> ~/environ.sh
 echo "export OCP_CONSOLE_URL=" >> ~/environ.sh
 echo "export OCP_API_URL=" >> ~/environ.sh
+
+# Your user-corresponding 3scale tenant's api, without "https://" prefeix
 echo "export API_URL=" >> ~/environ.sh
 echo "export API_NAMESPACE=3scale-api0" >> ~/environ.sh
 echo "export OCP_WILDCARD_DOMAIN=" >> ~/environ.sh
