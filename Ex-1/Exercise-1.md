@@ -12,7 +12,7 @@ The variables' values are dedicated for each participant and are provided by the
 ```bash
 echo "export OCP_USERNAME=" >> ~/environ.sh
 echo "export OCP_PASSWORD=openshift" >> ~/environ.sh
-echo "export API_USERNAME=” >> ~/environ.sh
+echo "export API_USERNAME=" >> ~/environ.sh
 echo "export API_PASSWORD=admin" >> ~/environ.sh
 echo "export OCP_CONSOLE_URL=" >> ~/environ.sh
 echo "export OCP_API_URL=” >> ~/environ.sh
