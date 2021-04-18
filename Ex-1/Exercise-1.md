@@ -145,12 +145,12 @@ $ oc get pods -w
 Wait until the DB’s pod (inventory-postgresql-1-XXXX) is ready with "1/1 Running", and then resume the app service (which depends on the DB to be up to work correctly):
 
 ```bash
-$ oc rollout resume deploy/inventory-service -n $OCP_USERNAME-coolstore
+oc rollout resume deploy/inventory-service -n $OCP_USERNAME-coolstore
 
-$ oc get pods -w
+oc get pods -w
 
 # Once the Postgresql & Inventory Service pods are running, run a cleanup
-$ for p in `oc get pod | grep Complete | awk '{print $1}'` ; do oc delete pod $p ; done
+for p in `oc get pod | grep Complete | awk '{print $1}'` ; do oc delete pod $p ; done
 ```
 
 After the service pods are up and running, extract the swagger of the app and examine its methods with a [Swagger Editor](https://editor.swagger.io/)
@@ -198,4 +198,4 @@ oc get route -n $OCP_USERNAME-coolstore
 ```
 
 **Desired output:**
-*No resources found in ${USER}-coolstore namespac*
+*No resources found in ${USER}-coolstore namespace*
