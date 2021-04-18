@@ -19,6 +19,8 @@ echo "export OCP_API_URL=" >> ~/environ.sh
 echo "export API_URL=" >> ~/environ.sh
 echo "export API_NAMESPACE=3scale-api0" >> ~/environ.sh
 echo "export OCP_WILDCARD_DOMAIN=" >> ~/environ.sh
+
+# After you fill the proper value for each variable
 source ~/environ.sh
 done
 ```
