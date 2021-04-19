@@ -183,6 +183,27 @@ The following are the valid product IDs seeded for this POC, which you can use t
 * 444435
 * 444436
 
+```bash
+cat > $HOME/lab/inventory-api-test.sh << EOF
+#!/bin/bash
+
+IDS="329299
+329199
+165613
+165954
+444434
+444435
+444436"
+
+for i in \$IDS
+do
+ curl -ks -X GET http://\`oc get route -n $OCP_USERNAME-coolstore  inventory-unsecured --template {{.spec.host}}\`/inventory/\$i | python -m json.tool
+done
+EOF
+
+sh $HOME/lab/inventory-api-test.sh
+```
+
 You can now view the routes exposed for each service:
 
 ```bash
