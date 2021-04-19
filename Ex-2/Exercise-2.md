@@ -158,7 +158,7 @@ Now first and foremost change the type of the APIcast deployment to APIcast self
 
 The difference between “APIcast self-managed” and “APIcast 3scale managed” is that in the former (self-managed) the APIcast is in our control - we control the scalability, the quotas, the high availability, the URL for both staging & production etc.  
 
-Configure in “Stating Public Base URL” to be the output of the following command:
+Configure in “Staging Public Base URL” to be the output of the following command:
 
 ```bash
 echo https://$OCP_USERNAME-coolstore-api-3scale-apicast-staging.apps.${OCP_WILDCARD_DOMAIN}:443
