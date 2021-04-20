@@ -10,7 +10,7 @@ We actually already saw the distributed option; Our entire lab environment is de
 
 About the APICast Self managed in comparison to APICast managed, and how to deploy it on Openshift, please read the following article that I made specifically about that topic - [link](https://medium.com/@tamber/3scale-mini-guide-apicast-self-managed-for-on-premise-deployments-e2ef53313c8).
 
-In the following exercise we are going to do something a bit more advanced - we will deploy APICast on a containerized environment (using podman) which is external to the Openshift platform.   
+In the following exercise we are going to do something a bit more advanced - we will deploy APICast on a containerized environment (using docker) which is external to the Openshift platform.   
 
 ## Generate Access Token for our new APICast
 The APICast requires an access token in order to communicate with the AMP - they are communicating using 3Scale API calls, and the AMP needs to recognize whoever reaches to it.
