@@ -69,6 +69,9 @@ In 3Scale, navigate to the coolstore backend’s dashboard, and press the “edi
 
 ```bash
 sudo docker run --name apicast -d -p <some free port above 8080>:8080 --network host -e THREESCALE_PORTAL_ENDPOINT=https://${APICast_ACCESS_TOKEN}@${API_URL} quay.io/3scale/apicast:master
+
+# For production environment use the image from the official RH registry - registry.redhat.io/3scale-amp2/apicast-gateway-rhel8:3scale2.10
+
 sudo docker ps -a
 ```
 
