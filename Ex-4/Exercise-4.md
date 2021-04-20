@@ -68,7 +68,7 @@ In 3Scale, navigate to the coolstore backend’s dashboard, and press the “edi
 [APICast Github Project](https://github.com/3scale/APIcast)
 
 ```bash
-sudo docker run --name apicast -d -p 8080:8080 --network host -e THREESCALE_PORTAL_ENDPOINT=https://${APICast_ACCESS_TOKEN}@${API_URL} quay.io/3scale/apicast:master
+sudo docker run --name apicast -d -p <some free port above 8080>:8080 --network host -e THREESCALE_PORTAL_ENDPOINT=https://${APICast_ACCESS_TOKEN}@${API_URL} quay.io/3scale/apicast:master
 sudo docker ps -a
 ```
 
