@@ -29,7 +29,7 @@ System Name: **read_only_application_plan**
 Application Require Approval: **do not mark** 
 * If this option is checked, when the user registers to the API - the 3Scale admin needs to approve them before they can get access to the API.
 
-Press **Ok**, and then press **Publish**. Hidden plans are not available for users.
+Confirm creation, and then press **Publish**. Hidden plans are not available for users.
 
 Choose the new application plan; Notice the separation to *Product Level* and to *Backend Level* - in the upper you can configure limitations that will enforce them on **all backends** (mostly useful for metrics that the APIcast counts for all the backends behind it), the latter enables limitations on a specific backend method access.
 
@@ -135,7 +135,7 @@ System Name: **premium_application_plan**
 Application Require Approval: **Mark** 
 *  If this option is checked, when the user registers to the API - the 3Scale admin needs to approve them before they can get access to the API. 
 
-Press **Ok**, and then press **Publish**. Hidden plans are not available for users. 
+Confirm creation, and then press **Publish**. Hidden plans are not available for users. 
 
 We need to change the user so it can use the new application plan
 
