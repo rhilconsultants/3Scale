@@ -201,6 +201,8 @@ do
 done
 EOF
 
+chmod a+x $HOME/lab/inventory-api-test.sh
+
 sh $HOME/lab/inventory-api-test.sh
 ```
 
