@@ -83,7 +83,7 @@ source ~/environ.sh
 export USER_KEY=<paste the key here>
 ```
 
-First of all - verify that you can’t access some method for more then 10 times
+First of all - verify that you can’t access some method for more then 4 times
 
 ```bash
 END=6
