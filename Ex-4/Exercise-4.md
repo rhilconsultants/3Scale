@@ -68,11 +68,11 @@ In 3Scale, navigate to the coolstore backend’s dashboard, and press the “edi
 [APICast Github Project](https://github.com/3scale/APIcast)
 
 ```bash
-sudo docker run --name apicast -d -p <some free port above 8080>:8080 --network host -e THREESCALE_PORTAL_ENDPOINT=https://${APICast_ACCESS_TOKEN}@${API_URL} quay.io/3scale/apicast:master
+sudo podman run -p 8080 --rm -d --name apicast -e APICAST_ENVIRONMENT=staging -e APICAST_CONFIGURATION_LOADER=lazy -e APICAST_CONFIGURATION_CACHE=5 -e THREESCALE_PORTAL_ENDPOINT=https://<TOKEN>@<3SCALE_MNGMT_ROUTE> quay.io/3scale/apicast:master
 
 # For production environment use the image from the official RH registry - registry.redhat.io/3scale-amp2/apicast-gateway-rhel8:3scale2.10
 
-sudo docker ps -a
+sudo podman ps -a
 ```
 
 <p align="center">
@@ -80,12 +80,15 @@ sudo docker ps -a
 </p>
 
 ### Switches Explainer
-* **--network host**: Runs the container and attaches it’s network interface to the host’s public interface for exposure.
-* **-d or --detach**: Runs the container in the background and prints the container ID. When it is not specified, the container runs in the foreground mode and you can stop it using CTRL + c. When started in the detached mode, you can reattach to the container with the docker attach command, for example, docker attach apicast.
+* **--rm**: Remove container (and pod if created) after exit
+
+* **-d or --detach**: Runs the container in the background and prints the container ID. When it is not specified, the container runs in the foreground mode and you can stop it using CTRL + c. When started in the detached mode, you can reattach to the container with the podman attach command, for example, docker attach apicast.
  
 * **-p or --publish**: Publishes a container’s port to the host. The value should have the format <host port="">:<container port="">, so -p 80:8080 will bind port 8080 of the container to port 80 of the host machine. For example, the Management API uses port 8090, so you may want to publish this port by adding -p 8090:8090 to the docker run command.
  
 * **-e or --env**: Sets environment variables.
+
+[Explainer for APICasts' environment variables](https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/2.10/html-single/administering_the_api_gateway/index#apicast_environment_variables)
 
 ```bash
 sudo docker exec -it apicast hostname
