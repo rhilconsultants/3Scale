@@ -10,7 +10,7 @@ We actually already saw the distributed option; Our entire lab environment is de
 
 About the APICast Self managed in comparison to APICast managed, and how to deploy it on Openshift, please read the following article that I made specifically about that topic - [link](https://medium.com/@tamber/3scale-mini-guide-apicast-self-managed-for-on-premise-deployments-e2ef53313c8).
 
-In the following exercise we are going to do something a bit more advanced - we will deploy APICast on a containerized environment (using docker) which is external to the Openshift platform.   
+In the following exercise we are going to do something a bit more advanced - we will deploy APICast on a containerized environment (using podman) which is external to the Openshift platform.   
 
 ## Generate Access Token for our new APICast
 The APICast requires an access token in order to communicate with the AMP - they are communicating using 3Scale API calls, and the AMP needs to recognize whoever reaches to it.
@@ -82,16 +82,15 @@ sudo podman ps -a
 ### Switches Explainer
 * **--rm**: Remove container (and pod if created) after exit
 
-* **-d or --detach**: Runs the container in the background and prints the container ID. When it is not specified, the container runs in the foreground mode and you can stop it using CTRL + c. When started in the detached mode, you can reattach to the container with the podman attach command, for example, docker attach apicast.
+* **-d or --detach**: Runs the container in the background and prints the container ID. When it is not specified, the container runs in the foreground mode and you can stop it using CTRL + c. When started in the detached mode, you can reattach to the container with the podman attach command, for example, podman attach apicast.
  
-* **-p or --publish**: Publishes a container’s port to the host. The value should have the format <host port="">:<container port="">, so -p 80:8080 will bind port 8080 of the container to port 80 of the host machine. For example, the Management API uses port 8090, so you may want to publish this port by adding -p 8090:8090 to the docker run command.
+* **-p or --publish**: Publishes a container’s port to the host. The value should have the format <host port="">:<container port="">, so -p 80:8080 will bind port 8080 of the container to port 80 of the host machine. For example, the Management API uses port 8090, so you may want to publish this port by adding -p 8090:8090 to the podman run command.
  
 * **-e or --env**: Sets environment variables.
-
-* [Explainer for APICasts' environment variables](https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/2.10/html-single/administering_the_api_gateway/index#apicast_environment_variables)
+  * [Explainer for APICasts' environment variables](https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/2.10/html-single/administering_the_api_gateway/index#apicast_environment_variables)
 
 ```bash
-sudo docker exec -it apicast hostname
+sudo podman exec -it apicast hostname
 # Copy it 
 ```
 
