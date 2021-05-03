@@ -88,7 +88,7 @@ sudo podman ps -a
  
 * **-e or --env**: Sets environment variables.
 
-[Explainer for APICasts' environment variables](https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/2.10/html-single/administering_the_api_gateway/index#apicast_environment_variables)
+* [Explainer for APICasts' environment variables](https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/2.10/html-single/administering_the_api_gateway/index#apicast_environment_variables)
 
 ```bash
 sudo docker exec -it apicast hostname
